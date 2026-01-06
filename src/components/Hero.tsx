@@ -25,7 +25,7 @@ const Hero = () => {
               <img 
                 src={profilePicture} 
                 alt="Akash Penliwar" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
               />
             </div>
             {/* Floating Elements */}
