@@ -8,10 +8,12 @@ import Certifications from '@/components/Certifications';
 import CTA from '@/components/CTA';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import CustomCursor from '@/components/CustomCursor';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden cursor-none">
+      <CustomCursor />
       <Navbar />
       <Hero />
       <About />
