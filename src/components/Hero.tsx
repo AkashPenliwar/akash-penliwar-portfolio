@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import { Github, Linkedin, Mail, MapPin, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import profilePicture from '@/assets/profile-picture.png';
 
 const Hero = () => {
   return (
@@ -21,9 +22,11 @@ const Hero = () => {
             className="relative"
           >
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden gradient-border glow-primary animate-pulse-glow">
-              <div className="w-full h-full rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                <span className="text-6xl md:text-7xl font-bold text-gradient">AP</span>
-              </div>
+              <img 
+                src={profilePicture} 
+                alt="Akash Penliwar" 
+                className="w-full h-full object-cover"
+              />
             </div>
             {/* Floating Elements */}
             <motion.div
