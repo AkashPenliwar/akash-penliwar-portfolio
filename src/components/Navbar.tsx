@@ -42,12 +42,18 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          <img
-            src="https://tapportfolio.lovable.app/assets/logo-CxDGoOCE.png"
-            alt="TAP Academy Logo"
-            className="h-10 md:h-12 w-auto"
-          />
+        <a 
+          href="#" 
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="flex items-center gap-2 group"
+        >
+          <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-xl bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform duration-300">
+            <span className="text-lg md:text-xl font-bold text-primary-foreground tracking-tight">TP</span>
+            <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          </div>
+          <span className="hidden sm:block text-lg font-semibold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            Tapas
+          </span>
         </a>
 
         {/* Desktop Navigation */}
