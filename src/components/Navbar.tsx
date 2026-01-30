@@ -45,14 +45,22 @@ const Navbar = () => {
         <a 
           href="#" 
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="flex items-center gap-2 group"
+          className="flex items-center gap-3 group"
         >
-          <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-xl bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform duration-300">
-            <span className="text-lg md:text-xl font-bold text-primary-foreground tracking-tight">TP</span>
-            <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div className="relative w-11 h-11 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center overflow-hidden group-hover:scale-110 transition-all duration-500 shadow-lg group-hover:shadow-primary/50 group-hover:shadow-xl">
+            {/* Animated background glow */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-white/20 via-transparent to-white/10 animate-pulse" />
+            {/* Rotating border effect */}
+            <div className="absolute inset-0 rounded-2xl border-2 border-white/20 group-hover:border-white/40 transition-colors duration-300" />
+            {/* Initials */}
+            <span className="relative text-xl md:text-2xl font-black text-primary-foreground tracking-tighter drop-shadow-lg group-hover:scale-110 transition-transform duration-300">
+              AP
+            </span>
+            {/* Shine effect on hover */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
           </div>
-          <span className="hidden sm:block text-lg font-semibold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            Tapas
+          <span className="hidden sm:block text-xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent group-hover:opacity-80 transition-opacity duration-300">
+            Abhisekh
           </span>
         </a>
 
