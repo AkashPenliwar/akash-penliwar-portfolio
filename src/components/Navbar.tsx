@@ -60,7 +60,7 @@ const Navbar = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
           </div>
           <span className="hidden sm:block text-xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent group-hover:opacity-80 transition-opacity duration-300">
-            Abhisekh
+            Akash Dev
           </span>
         </a>
 
