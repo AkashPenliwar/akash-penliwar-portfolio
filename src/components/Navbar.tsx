@@ -47,20 +47,48 @@ const Navbar = () => {
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="flex items-center gap-3 group"
         >
-          <div className="relative w-11 h-11 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center overflow-hidden group-hover:scale-110 transition-all duration-500 shadow-lg group-hover:shadow-primary/50 group-hover:shadow-xl">
-            {/* Animated background glow */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-white/20 via-transparent to-white/10 animate-pulse" />
-            {/* Rotating border effect */}
-            <div className="absolute inset-0 rounded-2xl border-2 border-white/20 group-hover:border-white/40 transition-colors duration-300" />
-            {/* Initials */}
-            <span className="relative text-xl md:text-2xl font-black text-primary-foreground tracking-tighter drop-shadow-lg group-hover:scale-110 transition-transform duration-300">
-              AP
-            </span>
-            {/* Shine effect on hover */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
+          {/* Techy Hexagonal Logo */}
+          <div className="relative w-12 h-12 md:w-14 md:h-14 group-hover:scale-110 transition-all duration-500">
+            {/* Outer hexagon frame */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-accent clip-hexagon animate-gradient bg-[length:200%_200%]" />
+            {/* Inner dark hexagon */}
+            <div className="absolute inset-[2px] bg-background clip-hexagon" />
+            {/* Glowing core */}
+            <div className="absolute inset-[4px] bg-gradient-to-br from-primary/20 via-secondary/10 to-accent/20 clip-hexagon" />
+            {/* Circuit lines */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="absolute w-[1px] h-3 bg-primary/60 top-1 left-1/2 -translate-x-1/2" />
+              <div className="absolute w-[1px] h-3 bg-accent/60 bottom-1 left-1/2 -translate-x-1/2" />
+              <div className="absolute w-2 h-[1px] bg-secondary/60 left-1 top-1/2 -translate-y-1/2" />
+              <div className="absolute w-2 h-[1px] bg-secondary/60 right-1 top-1/2 -translate-y-1/2" />
+            </div>
+            {/* Initials with techy style */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="text-lg md:text-xl font-black tracking-tighter drop-shadow-lg" style={{ fontFamily: 'Orbitron, sans-serif' }}>
+                <span className="text-primary">A</span>
+                <span className="text-secondary">P</span>
+              </span>
+            </div>
+            {/* Scanning line effect */}
+            <div className="absolute inset-0 overflow-hidden clip-hexagon">
+              <div className="absolute w-full h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent top-0 animate-scan" />
+            </div>
+            {/* Hover glow */}
+            <div className="absolute -inset-1 bg-primary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 clip-hexagon" />
           </div>
-          <span className="hidden sm:block text-xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent group-hover:opacity-80 transition-opacity duration-300">
-            Akash Dev
+          
+          {/* Animated gradient text */}
+          <span 
+            className="hidden sm:block text-xl font-bold tracking-wide group-hover:tracking-wider transition-all duration-300 animate-text-gradient bg-[length:200%_auto]"
+            style={{ 
+              fontFamily: 'Orbitron, sans-serif',
+              backgroundImage: 'linear-gradient(90deg, hsl(187 100% 50%), hsl(270 60% 60%), hsl(187 80% 40%), hsl(187 100% 50%))',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+            }}
+          >
+            Akash.dev
           </span>
         </a>
 
